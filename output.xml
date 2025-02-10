@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.8 on win32)" generated="2025-02-10T23:51:16.519212" rpa="false" schemaversion="5">
+<suite id="s1" name="Registration Tests" source="C:\Users\shweta\PycharmProjects\AI__Automation_sample\tests\registration_tests.robot">
+<test id="s1-t1" name="Successful Registration" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-10T23:51:20.072343" level="INFO">Opening browser 'Chrome' to base url 'https://practice.expandtesting.com/register'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-10T23:51:20.072343" elapsed="3.540827"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-10T23:51:23.626735" elapsed="2.262645"/>
+</kw>
+<kw name="Generate Xpath" owner="Utility">
+<msg time="2025-02-10T23:51:27.160031" level="INFO">error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False</msg>
+<msg time="2025-02-10T23:51:27.160031" level="FAIL">RateLimitError: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.</msg>
+<var>${username_xpath}</var>
+<arg>Username field</arg>
+<status status="FAIL" start="2025-02-10T23:51:25.890361" elapsed="1.277217">RateLimitError: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.</status>
+</kw>
+<kw name="Generate Xpath" owner="Utility">
+<var>${password_xpath}</var>
+<arg>Password field</arg>
+<status status="NOT RUN" start="2025-02-10T23:51:27.193094" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=${username_xpath}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-10T23:51:27.207725" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=${password_xpath}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-10T23:51:27.209718" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-10T23:51:27.212219" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-10T23:51:27.215813" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-10T23:51:20.069827" elapsed="7.148987">RateLimitError: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.</status>
+</test>
+<status status="FAIL" start="2025-02-10T23:51:16.521715" elapsed="10.711733"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Registration Tests" id="s1" pass="0" fail="1" skip="0">Registration Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-10T23:51:20.068796" level="WARN">Imported resource file 'C:\Users\shweta\PycharmProjects\AI__Automation_sample\resources\xpath.robot' is empty.</msg>
+</errors>
+</robot>
