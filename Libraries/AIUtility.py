@@ -5,7 +5,7 @@ load_dotenv()
 class AIUtility:
 
     def __init__(self):
-        openai.api_key = os.getenv("API_KEY") # Replace with your API key
+         # Replace with your API key
 
 
 
