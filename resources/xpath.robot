@@ -1,4 +1,4 @@
-${USERNAME_FIELD}    //input[@name='username_field']
-${PASSWORD_FIELD}    //input[@name='password_field']
-${CONFIRM_PASSWORD_FIELD}    //input[@name='confirm_password_field']
-${REGISTER_BUTTON}    //input[@name='register_button']
+${USERNAME_FIELD}    //input[@name='username']
+${PASSWORD_FIELD}    //input[@name='password']
+${CONFIRM_PASSWORD_FIELD}    //label[contains(text(),'Confirm Password')]/following-sibling::input
+${REGISTER_BUTTON}    //button[@type='submit']
